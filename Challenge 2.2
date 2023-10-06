@@ -1,0 +1,32 @@
+# Define the Player class
+class Player:
+    # Initialize the attribute for player name
+    def __init__(self, name):
+        self.name = name
+
+    # Define a method to play cricket
+    def play(self):
+        # Print a generic message
+        print(f"The player {self.name} is playing cricket.")
+
+# Define the Batsman class as a subclass of Player
+class Batsman(Player):
+    # Override the play method in the Batsman class
+    def play(self):
+        # Print a specific message
+        print(f"The batsman {self.name} is batting.")
+
+# Define the Bowler class as a subclass of Player
+class Bowler(Player):
+    # Override the play method in the Bowler class
+    def play(self):
+        # Print a specific message
+        print(f"The bowler {self.name} is bowling.")
+
+# Create objects of both the Batsman and Bowler classes with some names
+batsman = Batsman("Virat Kohli")
+bowler = Bowler("Jasprit Bumrah")
+
+# Call the play method for each object
+batsman.play() # The batsman Virat Kohli is batting.
+bowler.play() # The bowler Jasprit Bumrah is bowling.
